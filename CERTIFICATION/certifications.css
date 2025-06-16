@@ -1,0 +1,102 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Full height layout */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Background Video Styling */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+/* Logo */
+.logo {
+  font-family: 'Allura', cursive;
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00bcd4;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-top: auto;
+  backdrop-filter: blur(6px);
+}
