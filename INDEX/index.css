@@ -1,3 +1,6 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;500;600&display=swap');
+
 /* Reset */
 * {
   margin: 0;
@@ -9,9 +12,10 @@
 html, body {
   height: 100%;
   overflow: hidden;
+  color: #fff;
 }
 
-/* 🎞 Fullscreen Video */
+/* 🎞 Background Video */
 #bg-video {
   position: fixed;
   top: 0;
@@ -22,7 +26,7 @@ html, body {
   object-fit: cover;
 }
 
-/* 🔳 Overlay Content */
+/* 🌫 Overlay Wrapper */
 .content-overlay {
   position: relative;
   z-index: 2;
@@ -30,41 +34,52 @@ html, body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: white;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Navbar */
+/* 🧭 Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
+.nav-links a.active {
+  color: #00bcd4;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #00bcd4;
+  left: 0;
+  bottom: -4px;
+}
+
+/* 🖋 Logo */
 .logo {
   font-family: 'Allura', cursive;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #ffffff;
   text-decoration: none;
-  letter-spacing: 1px;
-  transition: transform 0.3s ease;
+  font-weight: 500;
 }
-
-.logo:hover {
-  transform: scale(1.07);
-}
-
 
 .logo:hover {
   transform: scale(1.05);
 }
 
-
+/* 🔗 Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -83,7 +98,7 @@ html, body {
   color: #00e5ff;
 }
 
-/* Hero Section */
+/* ✨ Hero Section */
 .hero {
   flex: 1;
   display: flex;
@@ -104,11 +119,12 @@ html, body {
   font-weight: 700;
 }
 
-/* Footer */
+/* 📌 Footer */
 footer {
   background: rgba(0, 0, 0, 0.5);
   padding: 1rem;
   text-align: center;
   font-size: 0.9rem;
   color: #ddd;
+  backdrop-filter: blur(5px);
 }
