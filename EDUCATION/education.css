@@ -47,6 +47,15 @@ body {
   backdrop-filter: blur(8px);
 }
 
+.nav-links a.active {
+  color: #00bcd4;
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
 /* Logo */
 .logo {
   font-family: 'Allura', cursive;
