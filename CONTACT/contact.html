@@ -11,28 +11,50 @@
 
   <!-- Background Video -->
   <video autoplay muted loop id="bg-video">
-  <source src="../INDEX/index.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+    <source src="../INDEX/index.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
   <!-- Navbar -->
   <nav class="navbar">
     <a href="../INDEX/index.html" class="logo">Aniket Maity</a>
     <ul class="nav-links">
-      <a href="../INDEX/index.html">Home</a>
+      <li><a href="../INDEX/index.html">Home</a></li>
       <li><a href="../ABOUT/about.html">About</a></li>
       <li><a href="../EDUCATION/education.html">Education</a></li>
+      <li><a href="../EXPERIENCE/experience.html">Experience</a></li>
       <li><a href="../CERTIFICATION/certifications.html">Certifications</a></li>
       <li><a href="../PROJECTS/projects.html">Projects</a></li>
       <li><a href="../CONTACT/contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- Contact Form Section -->
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="text" id="contact" placeholder="Contact No." required />
+      <input type="email" id="email" placeholder="Email ID" required />
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
   <!-- Footer -->
   <footer>
     &copy; 2025 Aniket Maity. All rights reserved.
   </footer>
+
+  <!-- JS for Form Handling -->
+  <script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent page reload
+      alert("Your message was sent successfully!");
+      form.reset(); // clears all input fields
+    });
+  </script>
 
 </body>
 </html>
