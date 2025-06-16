@@ -1,7 +1,5 @@
-/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +7,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Full height layout */
 html, body {
   height: 100%;
 }
@@ -23,7 +20,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Background Video Styling */
 #bg-video {
   position: fixed;
   top: 0;
@@ -47,25 +43,6 @@ body {
   backdrop-filter: blur(8px);
 }
 
-.nav-links a.active {
-  color: #00bcd4;
-  font-weight: 600;
-}
-
-.nav-links a.active::after {
-  width: 100%;
-}
-
-/* Logo */
-.logo {
-  font-family: 'Allura', cursive;
-  font-size: 2rem;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -97,6 +74,94 @@ body {
 
 .nav-links a:hover {
   color: #00bcd4;
+}
+
+.nav-links a.active {
+  color: #00bcd4;
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Allura', cursive;
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Timeline Section */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #00e5ff;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 2rem 4rem;
+  z-index: 2;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item .content {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  min-height: 60px;
+}
+
+.timeline-item .icon {
+  position: absolute;
+  top: 28px;
+  width: 30px;
+  height: 30px;
+  background-color: #00e5ff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  z-index: 3;
+}
+
+.timeline-item.left .icon {
+  right: -15px;
+}
+
+.timeline-item.right .icon {
+  left: -15px;
 }
 
 /* Footer */
